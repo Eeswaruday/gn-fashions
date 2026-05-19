@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+  <rect width="900" height="1100" fill="#fff8f0"/>
+  <rect x="70" y="70" width="760" height="960" rx="36" fill="#e8b4c8"/>
+  <path d="M340 155h220l72 170-75 45v540H343V370l-75-45z" fill="#8b1538"/>
+  <path d="M390 155c15 72 105 72 120 0" fill="none" stroke="#d4af37" stroke-width="18"/>
+  <path d="M360 420h180M360 520h180M360 620h180" stroke="#d4af37" stroke-width="18" opacity=".85"/>
+  <circle cx="450" cy="735" r="72" fill="#fff8f0" opacity=".22"/>
+  <text x="450" y="1010" text-anchor="middle" font-family="Poppins, Arial" font-size="56" fill="#8b1538">Kurti</text>
+</svg>

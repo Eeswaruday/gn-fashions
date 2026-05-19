@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+  <rect width="900" height="1100" fill="#fff8f0"/>
+  <rect x="70" y="70" width="760" height="960" rx="36" fill="#5a0f27"/>
+  <path d="M225 790c60-210 150-335 225-335s165 125 225 335z" fill="#d4af37"/>
+  <path d="M325 220h250v310H325z" fill="#a64d79"/>
+  <path d="M275 530h350" stroke="#fff8f0" stroke-width="30"/>
+  <circle cx="450" cy="330" r="78" fill="#f5deb3"/>
+  <text x="450" y="1010" text-anchor="middle" font-family="Poppins, Arial" font-size="52" fill="#fff8f0">Festive</text>
+</svg>

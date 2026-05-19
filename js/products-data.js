@@ -1,0 +1,37 @@
+// GN Fashions product database.
+// Edit this file when prices, product names, discounts, or images change.
+// For image changes, place your image inside images/products/ and update the image path below.
+window.GN_PRODUCTS = [
+    { id: 1, name: 'Kanchipuram Style Saree', category: 'womens', price: 2500, original: 3200, discount: 22, image: 'images/products/saree.svg' },
+    { id: 2, name: 'Everyday Cotton Kurti', category: 'womens', price: 899, original: 1200, discount: 25, image: 'images/products/kurti.svg' },
+    { id: 3, name: 'Soft Silk Saree', category: 'womens', price: 3500, original: 4500, discount: 22, image: 'images/products/silk-saree.svg' },
+    { id: 4, name: 'Embroidered Kurti Set', category: 'womens', price: 1299, original: 1599, discount: 19, image: 'images/products/kurti.svg' },
+    { id: 5, name: 'Festive Cotton Kurta', category: 'mens', price: 799, original: 999, discount: 20, image: 'images/products/mens-kurta.svg' },
+    { id: 6, name: 'Traditional Dhoti Set', category: 'mens', price: 899, original: 1199, discount: 25, image: 'images/products/mens-kurta.svg' },
+    { id: 7, name: 'Smart Casual Shirt', category: 'mens', price: 599, original: 799, discount: 25, image: 'images/products/mens-shirt.svg' },
+    { id: 8, name: 'Formal Shirt Combo', category: 'mens', price: 1299, original: 1699, discount: 24, image: 'images/products/mens-shirt.svg' },
+    { id: 9, name: 'Kids Party Frock', category: 'kids', price: 499, original: 699, discount: 29, image: 'images/products/kids-wear.svg' },
+    { id: 10, name: 'Boys Kurta Set', category: 'kids', price: 399, original: 599, discount: 33, image: 'images/products/kids-wear.svg' },
+    { id: 11, name: 'Girls Traditional Set', category: 'kids', price: 599, original: 799, discount: 25, image: 'images/products/kids-wear.svg' },
+    { id: 12, name: 'Kids Festival Wear', category: 'kids', price: 699, original: 999, discount: 30, image: 'images/products/kids-wear.svg' },
+    { id: 13, name: 'Designer Lehenga Set', category: 'ethnic', price: 2999, original: 4499, discount: 33, image: 'images/products/lehenga.svg' },
+    { id: 14, name: 'Temple Border Saree', category: 'ethnic', price: 1999, original: 2999, discount: 33, image: 'images/products/saree.svg' },
+    { id: 15, name: 'Embroidered Dress Material', category: 'ethnic', price: 1499, original: 1999, discount: 25, image: 'images/products/dress-material.svg' },
+    { id: 16, name: 'Traditional Suit Set', category: 'ethnic', price: 1799, original: 2399, discount: 25, image: 'images/products/kurti.svg' },
+    { id: 17, name: 'Summer Western Dress', category: 'western', price: 899, original: 1299, discount: 31, image: 'images/products/western-dress.svg' },
+    { id: 18, name: 'Casual Jeans', category: 'western', price: 799, original: 1099, discount: 27, image: 'images/products/western-dress.svg' },
+    { id: 19, name: 'Top and Bottom Set', category: 'western', price: 1199, original: 1599, discount: 25, image: 'images/products/new-arrival.svg' },
+    { id: 20, name: 'Evening Wear Dress', category: 'western', price: 1499, original: 1999, discount: 25, image: 'images/products/western-dress.svg' },
+    { id: 21, name: 'Traditional Necklace', category: 'accessories', price: 299, original: 499, discount: 40, image: 'images/products/accessories.svg' },
+    { id: 22, name: 'Bangles Set', category: 'accessories', price: 199, original: 399, discount: 50, image: 'images/products/accessories.svg' },
+    { id: 23, name: 'Festive Earrings', category: 'accessories', price: 149, original: 299, discount: 50, image: 'images/products/accessories.svg' },
+    { id: 24, name: 'Clutch and Belt Set', category: 'accessories', price: 399, original: 699, discount: 43, image: 'images/products/accessories.svg' },
+    { id: 25, name: 'Premium Saree Deal', category: 'festival', price: 2299, original: 3499, discount: 34, image: 'images/products/festival.svg' },
+    { id: 26, name: 'Boutique Kurti Offer', category: 'festival', price: 1099, original: 1799, discount: 39, image: 'images/products/kurti.svg' },
+    { id: 27, name: 'Grand Lehenga Collection', category: 'festival', price: 3999, original: 5999, discount: 33, image: 'images/products/lehenga.svg' },
+    { id: 28, name: 'Family Ethnic Combo', category: 'festival', price: 1899, original: 2999, discount: 37, image: 'images/products/festival.svg' },
+    { id: 29, name: 'Latest Designer Saree', category: 'new', price: 2799, original: 3999, discount: 30, image: 'images/products/saree.svg' },
+    { id: 30, name: 'New Season Kurti', category: 'new', price: 999, original: 1399, discount: 29, image: 'images/products/kurti.svg' },
+    { id: 31, name: 'Trendy Dress', category: 'new', price: 1399, original: 1999, discount: 30, image: 'images/products/new-arrival.svg' },
+    { id: 32, name: 'Modern Ethnic Fusion', category: 'new', price: 1599, original: 2299, discount: 30, image: 'images/products/dress-material.svg' }
+];

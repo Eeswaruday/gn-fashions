@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+  <rect width="900" height="1100" fill="#fff8f0"/>
+  <rect x="70" y="70" width="760" height="960" rx="36" fill="#d4a5c5"/>
+  <path d="M365 150h170l50 175H315z" fill="#8b1538"/>
+  <path d="M450 330c130 115 205 305 250 565H200c45-260 120-450 250-565z" fill="#a64d79"/>
+  <path d="M245 835h410M285 700h330M335 565h230" stroke="#d4af37" stroke-width="22"/>
+  <circle cx="450" cy="445" r="28" fill="#d4af37"/>
+  <text x="450" y="1010" text-anchor="middle" font-family="Poppins, Arial" font-size="56" fill="#8b1538">Lehenga</text>
+</svg>

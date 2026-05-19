@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+  <rect width="900" height="1100" fill="#fff8f0"/>
+  <rect x="70" y="70" width="760" height="960" rx="36" fill="#5a0f27"/>
+  <path d="M250 150h405v780H250z" fill="#d4af37"/>
+  <path d="M300 150c155 210 245 355 270 780H250V150z" fill="#8b1538"/>
+  <path d="M320 210h270M330 310h250M345 410h220M365 510h180" stroke="#fff8f0" stroke-width="16" opacity=".65"/>
+  <text x="450" y="1010" text-anchor="middle" font-family="Poppins, Arial" font-size="52" fill="#fff8f0">Silk Saree</text>
+</svg>

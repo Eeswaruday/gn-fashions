@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GN Fashions - Trusted fashion destination in Maddipadu offering stylish and affordable clothing for men, women, and kids.">
+    <meta name="keywords" content="clothing store Maddipadu, GN Fashions, fashion shop Andhra Pradesh, ethnic wear, saree shop">
+    <meta name="author" content="GN Fashions">
+    <title>GN Fashions - Stylish & Affordable Fashion in Maddipadu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <i class="fas fa-crown"></i>
+                <span>GN Fashions</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="offers.html" class="nav-link">Offers</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <button class="nav-icon-btn">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="nav-icon-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Style That Speaks</h1>
+            <p class="hero-subtitle">GN Fashions, Maddipadu</p>
+            <p class="hero-description">Affordable Fashion for Every Occasion</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('collections')">Explore Collections</button>
+                <button class="btn btn-secondary"><a href="contact.html" style="text-decoration: none; color: inherit;">Visit Store</a></button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <h2 class="section-title">Welcome to GN Fashions</h2>
+            <p class="section-subtitle">Your Trusted Fashion Destination in Maddipadu</p>
+            <div class="welcome-content">
+                <div class="welcome-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Trusted by Community</h3>
+                    <p>Serving Maddipadu with quality fashion and excellent service for years</p>
+                </div>
+                <div class="welcome-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Latest Trends</h3>
+                    <p>Always updated with the hottest fashion styles and collections</p>
+                </div>
+                <div class="welcome-card">
+                    <i class="fas fa-tag"></i>
+                    <h3>Affordable Prices</h3>
+                    <p>Premium fashion at prices that fit your budget</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections Carousel -->
+    <section class="featured-collections" id="collections">
+        <div class="container">
+            <h2 class="section-title">Featured Collections</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="prevSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel">
+                    <div class="carousel-inner" id="carousel-inner">
+                        <div class="carousel-item">
+                            <div class="collection-card">
+                                <div class="collection-image sarees"></div>
+                                <h3>Sarees</h3>
+                                <p>Traditional & Modern</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="collection-card">
+                                <div class="collection-image kurtis"></div>
+                                <h3>Kurtis</h3>
+                                <p>Elegant & Comfortable</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="collection-card">
+                                <div class="collection-image lehengas"></div>
+                                <h3>Lehengas</h3>
+                                <p>Festive & Trendy</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="collection-card">
+                                <div class="collection-image mens"></div>
+                                <h3>Men's Fashion</h3>
+                                <p>Shirts & Kurtas</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="collection-card">
+                                <div class="collection-image kids"></div>
+                                <h3>Kids Wear</h3>
+                                <p>Colorful & Playful</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="collection-card">
+                                <div class="collection-image festival"></div>
+                                <h3>Festival Collection</h3>
+                                <p>Festive Special</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="nextSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose GN Fashions -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose GN Fashions?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Affordable Prices</h3>
+                    <p>Premium quality fashion at prices that won't break your budget</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-arrow-trend-up"></i>
+                    </div>
+                    <h3>Latest Trends</h3>
+                    <p>Always updated with the newest fashion collections and styles</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Festival Collections</h3>
+                    <p>Special collections for every festival and celebration</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Shopping</h3>
+                    <p>Fashion for men, women, kids and the whole family</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Quality Fabrics</h3>
+                    <p>Carefully selected fabrics ensuring comfort and durability</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Trusted Brand</h3>
+                    <p>Serving Maddipadu community with trust and integrity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Experience Section -->
+    <section class="customer-experience">
+        <div class="container">
+            <h2 class="section-title">Your Shopping Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="exp-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Friendly Atmosphere</h3>
+                    <p>Warm and welcoming shopping experience for everyone</p>
+                </div>
+                <div class="experience-card">
+                    <div class="exp-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>Fashion for All Generations</h3>
+                    <p>From traditional to modern styles suitable for everyone</p>
+                </div>
+                <div class="experience-card">
+                    <div class="exp-icon">
+                        <i class="fas fa-blend"></i>
+                    </div>
+                    <h3>Blend of Traditional & Modern</h3>
+                    <p>South Indian elegance meets contemporary fashion trends</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Visit Us Today in Maddipadu</h2>
+            <p>Discover your perfect style at GN Fashions</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary"><a href="contact.html" style="text-decoration: none; color: inherit;">Get Directions</a></button>
+                <button class="btn btn-secondary"><a href="https://wa.me/9705220405" target="_blank" style="text-decoration: none; color: inherit;">WhatsApp Us</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9705220405" target="_blank" class="whatsapp-button" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GN Fashions</h4>
+                    <p>Your trusted fashion destination in Maddipadu</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <p>Shop No 20, Sri Venkateswara Complex<br>Main Road, Maddipadu<br>Prakasam District, Andhra Pradesh 523211</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:097052204005">097052 20405</a></p>
+                    <p><a href="https://wa.me/9705220405">WhatsApp: +91 97052 20405</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Open Daily<br>Closes at 8:30 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GN Fashions, Maddipadu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

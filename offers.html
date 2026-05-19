@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exclusive offers and new arrivals at GN Fashions - weekly deals, family shopping offers, combo savings, and local-store discounts.">
+    <meta name="keywords" content="fashion offers Maddipadu, clothing deals, new arrivals, GN Fashions offers">
+    <title>Offers & New Arrivals - GN Fashions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <i class="fas fa-crown"></i>
+                <span>GN Fashions</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="offers.html" class="nav-link active">Offers</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <button class="nav-icon-btn">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="nav-icon-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Special Offers</h1>
+        <p>Fresh deals, local-store savings, and latest arrivals for the whole family</p>
+    </section>
+
+    <!-- Main Banner Offers -->
+    <section class="offers-banner">
+        <div class="container">
+            <div class="banner-slider" id="banner-slider">
+                <div class="banner-slide active">
+                    <div class="banner-content weekly-banner">
+                        <div class="banner-text">
+                            <h2>Weekly Fresh Deals</h2>
+                            <p>Handpicked sarees, kurtis, shirts, kids wear, and accessories at friendly Maddipadu prices</p>
+                            <p class="discount-text">Save up to 35%</p>
+                            <a class="btn btn-primary" href="collections.html">Shop Deals</a>
+                        </div>
+                        <div class="banner-badge">THIS WEEK</div>
+                    </div>
+                </div>
+                <div class="banner-slide">
+                    <div class="banner-content family-banner">
+                        <div class="banner-text">
+                            <h2>Family Shopping Combo</h2>
+                            <p>Shop for women, men, and kids together and ask for the best in-store combo price</p>
+                            <p class="discount-text">Bundle Savings</p>
+                            <a class="btn btn-primary" href="collections.html">View Family Picks</a>
+                        </div>
+                        <div class="banner-badge">FAMILY VALUE</div>
+                    </div>
+                </div>
+                <div class="banner-slide">
+                    <div class="banner-content arrivals-banner">
+                        <div class="banner-text">
+                            <h2>Latest Store Arrivals</h2>
+                            <p>New boutique-style ethnic and western fashion pieces added for daily and occasion wear</p>
+                            <p class="discount-text">Fresh Stock</p>
+                            <a class="btn btn-primary" href="collections.html">Explore New Arrivals</a>
+                        </div>
+                        <div class="banner-badge">NEW IN STORE</div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-controls">
+                <button class="control-btn" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="control-btn" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Section -->
+    <section class="flash-sale">
+        <div class="container">
+            <div class="flash-header">
+                <h2>Flash Sale</h2>
+                <div class="flash-timer">
+                    <span class="timer-label">Ends In:</span>
+                    <span class="timer-display" id="timer">04:32:15</span>
+                </div>
+            </div>
+            <div class="flash-products">
+                <div class="flash-product-card">
+                    <div class="flash-badge">-35%</div>
+                    <div class="flash-image"><img src="images/products/saree.svg" alt="Traditional Saree" loading="lazy"></div>
+                    <h3>Traditional Saree</h3>
+                    <p class="price"><span class="original">Rs. 2,500</span> <span class="discount">Rs. 1,625</span></p>
+                    <button class="btn btn-small" type="button" onclick="addToCart(1)">Add to Cart</button>
+                </div>
+                <div class="flash-product-card">
+                    <div class="flash-badge">-40%</div>
+                    <div class="flash-image"><img src="images/products/kurti.svg" alt="Elegant Kurti" loading="lazy"></div>
+                    <h3>Elegant Kurti</h3>
+                    <p class="price"><span class="original">Rs. 1,200</span> <span class="discount">Rs. 720</span></p>
+                    <button class="btn btn-small" type="button" onclick="addToCart(2)">Add to Cart</button>
+                </div>
+                <div class="flash-product-card">
+                    <div class="flash-badge">-45%</div>
+                    <div class="flash-image"><img src="images/products/lehenga.svg" alt="Festive Lehenga" loading="lazy"></div>
+                    <h3>Festive Lehenga</h3>
+                    <p class="price"><span class="original">Rs. 3,500</span> <span class="discount">Rs. 1,925</span></p>
+                    <button class="btn btn-small" type="button" onclick="addToCart(13)">Add to Cart</button>
+                </div>
+                <div class="flash-product-card">
+                    <div class="flash-badge">-30%</div>
+                    <div class="flash-image"><img src="images/products/kids-wear.svg" alt="Kids Wear Collection" loading="lazy"></div>
+                    <h3>Kids Wear Collection</h3>
+                    <p class="price"><span class="original">Rs. 800</span> <span class="discount">Rs. 560</span></p>
+                    <button class="btn btn-small" type="button" onclick="addToCart(12)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Collections -->
+    <section class="trending-section">
+        <div class="container">
+            <h2 class="section-title">Trending Now</h2>
+            <p class="section-subtitle">Most Popular Collections This Season</p>
+            <div class="trending-grid">
+                <div class="trending-card">
+                    <div class="trending-image"><img src="images/products/kurti.svg" alt="Summer Kurtis" loading="lazy"></div>
+                    <div class="trending-info">
+                        <h3>Summer Kurtis</h3>
+                        <p>Light and comfortable for the summer season</p>
+                        <span class="trending-badge">Trending</span>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <div class="trending-image"><img src="images/products/western-dress.svg" alt="Western Wear" loading="lazy"></div>
+                    <div class="trending-info">
+                        <h3>Western Wear</h3>
+                        <p>Modern styles for everyday fashion</p>
+                        <span class="trending-badge">Popular</span>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <div class="trending-image"><img src="images/products/saree.svg" alt="Ethnic Sarees" loading="lazy"></div>
+                    <div class="trending-info">
+                        <h3>Ethnic Sarees</h3>
+                        <p>Traditional elegance with modern touch</p>
+                        <span class="trending-badge">Must Have</span>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <div class="trending-image"><img src="images/products/mens-kurta.svg" alt="Men's Fashion" loading="lazy"></div>
+                    <div class="trending-info">
+                        <h3>Men's Fashion</h3>
+                        <p>Stylish kurtas and traditional wear</p>
+                        <span class="trending-badge">Hot Pick</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="special-offers">
+        <div class="container">
+            <h2 class="section-title">Special Seasonal Offers</h2>
+            <div class="offers-list">
+                <div class="offer-item">
+                    <div class="offer-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Clearance Sale</h3>
+                    <p>Up to 60% off on selected items - Limited stock!</p>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Bundle Offers</h3>
+                    <p>Buy 2, Get 1 Free on select ethnic wear collections</p>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Pack</h3>
+                    <p>Special discounts for bulk purchases and family shopping</p>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Loyalty Rewards</h3>
+                    <p>Regular customers get exclusive discounts and early access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="new-arrivals">
+        <div class="container">
+            <h2 class="section-title">New Arrivals This Week</h2>
+            <div class="new-arrivals-grid">
+                <div class="arrival-card">
+                    <div class="arrival-badge">NEW</div>
+                    <div class="arrival-image"><img src="images/products/saree.svg" alt="Designer Sarees" loading="lazy"></div>
+                    <h3>Designer Sarees</h3>
+                    <p class="arrival-category">Ethnic Wear</p>
+                </div>
+                <div class="arrival-card">
+                    <div class="arrival-badge">NEW</div>
+                    <div class="arrival-image"><img src="images/products/kurti.svg" alt="Contemporary Kurtis" loading="lazy"></div>
+                    <h3>Contemporary Kurtis</h3>
+                    <p class="arrival-category">Women's Wear</p>
+                </div>
+                <div class="arrival-card">
+                    <div class="arrival-badge">NEW</div>
+                    <div class="arrival-image"><img src="images/products/dress-material.svg" alt="Fusion Wear" loading="lazy"></div>
+                    <h3>Fusion Wear</h3>
+                    <p class="arrival-category">Western Ethnic</p>
+                </div>
+                <div class="arrival-card">
+                    <div class="arrival-badge">NEW</div>
+                    <div class="arrival-image"><img src="images/products/kids-wear.svg" alt="Kids Collection" loading="lazy"></div>
+                    <h3>Kids Collection</h3>
+                    <p class="arrival-category">Kids Wear</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Style Updates -->
+    <section class="newsletter-section style-alert-section">
+        <div class="container">
+            <h2>Get Personal Style Updates</h2>
+            <p>Select what you like and send it on WhatsApp. We will share new arrivals, sizes, and offers directly.</p>
+            <div class="style-alert-box">
+                <div class="style-preferences" aria-label="Style preferences">
+                    <label><input type="checkbox" value="Sarees"> Sarees</label>
+                    <label><input type="checkbox" value="Kurtis"> Kurtis</label>
+                    <label><input type="checkbox" value="Men's Wear"> Men's Wear</label>
+                    <label><input type="checkbox" value="Kids Wear"> Kids Wear</label>
+                    <label><input type="checkbox" value="New Arrivals"> New Arrivals</label>
+                    <label><input type="checkbox" value="Combo Offers"> Combo Offers</label>
+                </div>
+                <div class="style-alert-actions">
+                    <input type="tel" placeholder="Your WhatsApp number" id="updates-phone" inputmode="tel">
+                    <button class="btn btn-primary" onclick="joinStyleUpdates()">Join Updates</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9705220405" target="_blank" class="whatsapp-button" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GN Fashions</h4>
+                    <p>Your trusted fashion destination in Maddipadu</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <p>Shop No 20, Sri Venkateswara Complex<br>Main Road, Maddipadu<br>Prakasam District, Andhra Pradesh 523211</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:097052204005">097052 20405</a></p>
+                    <p><a href="https://wa.me/9705220405">WhatsApp: +91 97052 20405</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Open Daily<br>Closes at 8:30 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GN Fashions, Maddipadu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

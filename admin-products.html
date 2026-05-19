@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager - GN Fashions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a class="nav-logo" href="index.html">
+                <i class="fas fa-crown"></i>
+                <span>GN Fashions</span>
+            </a>
+            <div class="nav-menu active-admin">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="admin-products.html" class="nav-link active">Product Manager</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header admin-header">
+        <h1>Product Manager</h1>
+        <p>Edit product prices, names, discounts, and image paths from one place</p>
+    </section>
+
+    <main class="admin-products-section">
+        <div class="container">
+            <div class="admin-note">
+                <h2>How this works</h2>
+                <p>Because this is a static HTML website, browser security will not allow a webpage to directly overwrite project files or commit to GitHub safely. Use this editor to update products, then click <strong>Copy Updated Code</strong> or <strong>Download products-data.js</strong>. Replace <code>js/products-data.js</code>, push to GitHub, and Netlify will publish the live website.</p>
+            </div>
+
+            <div class="admin-actions">
+                <button class="btn btn-primary" type="button" onclick="saveAdminPreview()">Save Preview in This Browser</button>
+                <button class="btn btn-secondary admin-secondary" type="button" onclick="copyProductsCode()">Copy Updated Code</button>
+                <button class="btn btn-secondary admin-secondary" type="button" onclick="downloadProductsFile()">Download products-data.js</button>
+                <button class="btn btn-secondary admin-secondary" type="button" onclick="resetAdminPreview()">Reset Preview</button>
+            </div>
+
+            <div class="admin-table-wrap">
+                <table class="products-admin-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Original</th>
+                            <th>Discount %</th>
+                            <th>Image Path</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-products-body"></tbody>
+                </table>
+            </div>
+
+            <label class="generated-code-label" for="generated-products-code">Generated products-data.js</label>
+            <textarea id="generated-products-code" class="generated-products-code" readonly></textarea>
+        </div>
+    </main>
+
+    <script src="js/products-data.js"></script>
+    <script>
+        const categoryOptions = {
+            womens: "Women's Wear",
+            mens: "Men's Wear",
+            kids: 'Kids Wear',
+            ethnic: 'Ethnic Wear',
+            western: 'Western Wear',
+            accessories: 'Accessories',
+            festival: 'Festival Collection',
+            new: 'New Arrivals'
+        };
+
+        let adminProducts = JSON.parse(localStorage.getItem('gnAdminProductsPreview') || 'null') || JSON.parse(JSON.stringify(window.GN_PRODUCTS));
+
+        function renderAdminProducts() {
+            const body = document.getElementById('admin-products-body');
+            body.innerHTML = adminProducts.map(product => `
+                <tr>
+                    <td><img src="${product.image}" alt="${product.name}" class="admin-product-thumb"></td>
+                    <td><input value="${escapeHtml(product.name)}" data-id="${product.id}" data-field="name"></td>
+                    <td>
+                        <select data-id="${product.id}" data-field="category">
+                            ${Object.entries(categoryOptions).map(([value, label]) => `<option value="${value}" ${product.category === value ? 'selected' : ''}>${label}</option>`).join('')}
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" value="${product.price}" data-id="${product.id}" data-field="price"></td>
+                    <td><input type="number" min="0" value="${product.original}" data-id="${product.id}" data-field="original"></td>
+                    <td><input type="number" min="0" max="90" value="${product.discount}" data-id="${product.id}" data-field="discount"></td>
+                    <td><input value="${escapeHtml(product.image)}" data-id="${product.id}" data-field="image"></td>
+                </tr>
+            `).join('');
+
+            body.querySelectorAll('input, select').forEach(input => {
+                input.addEventListener('input', updateProductFromInput);
+                input.addEventListener('change', updateProductFromInput);
+            });
+
+            updateGeneratedCode();
+        }
+
+        function updateProductFromInput(event) {
+            const id = Number(event.target.dataset.id);
+            const field = event.target.dataset.field;
+            const product = adminProducts.find(item => item.id === id);
+            if (!product) return;
+            product[field] = ['price', 'original', 'discount'].includes(field)
+                ? Number(event.target.value || 0)
+                : event.target.value;
+            updateGeneratedCode();
+        }
+
+        function productsCode() {
+            return `// GN Fashions product database.
+// Edit this file when prices, product names, discounts, or images change.
+// For image changes, place your image inside images/products/ and update the image path below.
+window.GN_PRODUCTS = ${JSON.stringify(adminProducts, null, 4)};`;
+        }
+
+        function updateGeneratedCode() {
+            document.getElementById('generated-products-code').value = productsCode();
+        }
+
+        function saveAdminPreview() {
+            localStorage.setItem('gnAdminProductsPreview', JSON.stringify(adminProducts));
+            alert('Preview saved in this browser. To update the live website, copy or download products-data.js and upload it to GitHub.');
+        }
+
+        function resetAdminPreview() {
+            localStorage.removeItem('gnAdminProductsPreview');
+            adminProducts = JSON.parse(JSON.stringify(window.GN_PRODUCTS));
+            renderAdminProducts();
+        }
+
+        async function copyProductsCode() {
+            const code = productsCode();
+            try {
+                await navigator.clipboard.writeText(code);
+                alert('Updated products-data.js code copied.');
+            } catch (error) {
+                document.getElementById('generated-products-code').select();
+                alert('Copy blocked by browser. The code is selected now; press Ctrl+C.');
+            }
+        }
+
+        function downloadProductsFile() {
+            const blob = new Blob([productsCode()], { type: 'application/javascript' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'products-data.js';
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function escapeHtml(value) {
+            return String(value).replace(/[&<>"']/g, char => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            }[char]));
+        }
+
+        renderAdminProducts();
+    </script>
+</body>
+</html>
